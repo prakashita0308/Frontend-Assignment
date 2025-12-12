@@ -50,7 +50,6 @@ npm start
 ## Key Features
 
 ### Pixel-Perfect UI
-- Exact title box (919×102) with border styling
 - Full gradient background identical to Figma prototype
 - Glass-style card frame using gradient borders and shadows
 - Styled question cards and option blocks matching design specs
@@ -105,17 +104,19 @@ npm start
 ## Folder Structure
 ```
 /app
-  page.tsx
   globals.css
+  layout.tsx
+  page.tsx
 /components
+  icons.tsx
+  Mascot.tsx
   Quiz.tsx
   ResultScreen.tsx
-  Mascot.tsx
 /data
   questions.ts
 /public/assets
-  mascot.gif
   speech-bubble.png
+  mascot.gif
 ```
 
 ---

@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quiz App — Next.js + TypeScript + Tailwind + Framer Motion
 
-## Getting Started
+## Overview
+This is a fully responsive Quiz Application built using Next.js, TypeScript, Tailwind CSS, and Framer Motion.  
+The UI is designed to match the provided Figma prototype with pixel-perfect accuracy, including gradients, title box, mascot positioning, animations, and interactive quiz flow.
 
-First, run the development server:
+---
 
+## Tech Stack Used
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Hooks
+- Vercel (optional deployment)
+
+---
+
+## Setup Instructions
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd quiz-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run the development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Open in browser
+```
+http://localhost:3000
+```
 
-## Learn More
+### 5. Build for production
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Pixel-Perfect UI
+- Exact title box (919×102) with border styling
+- Full gradient background identical to Figma prototype
+- Glass-style card frame using gradient borders and shadows
+- Styled question cards and option blocks matching design specs
 
-## Deploy on Vercel
+### Quiz Functionality
+- Select and change answers
+- Navigation between questions
+- Auto-submit on last question
+- Final results screen with score
+- Restart button
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Animations
+- Smooth fade/slide transitions via Framer Motion
+- Hover lift animation on options
+- Progress bar animation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Mascot Interaction
+- Mascot paw + speech bubble positioned exactly like Figma
+- Only appears on question 1
+- Layered properly with z-index
+
+### Accessibility
+- Keyboard-friendly
+- ARIA roles and labels included
+
+---
+
+## Assumptions Made
+- Number of questions is fixed and provided locally (`questions.ts`)
+- Mascot appears only on the first question as shown in the prototype
+- No backend storage required; quiz runs fully client-side
+- Answers can be changed before submitting, but not after viewing results
+- Layout values intentionally fixed for Figma accuracy
+
+---
+
+## Time Spent on the Assignment
+
+| Task | Duration |
+|------|----------|
+| Project setup | 30 minutes |
+| Quiz logic implementation | 1 hour |
+| UI styling based on Figma | 2.5 hours |
+| Gradient + border fine-tuning | 1 hour |
+| Animations using Framer Motion | 30 minutes |
+| Mascot + speech bubble placement | 45 minutes |
+| Final testing & refinements | 45 minutes |
+| **Total Time Spent** | **~7 hours** |
+
+---
+
+## Folder Structure
+```
+/app
+  page.tsx
+  globals.css
+/components
+  Quiz.tsx
+  ResultScreen.tsx
+  Mascot.tsx
+/data
+  questions.ts
+/public/assets
+  mascot.gif
+  speech-bubble.png
+```
+
+---
+
